@@ -5,7 +5,7 @@
       "title": "About this site",
       "author": [],
       "contents": "\r\nAbout Me\r\nI’m Max Xu and I’m going to UBC next year.\r\nAbout the Project\r\nExamining Covid 19 Cases and Trends Among the Continents: Evidently, the topic of Covid 19 has been the headline for the past year, impacting the lives of many in our community. However as seen from the news, the degree of influence it has had in different places varies and most people have only looked at the status of North America. My project looks to examine the other continents and attempts find trends/potential reasons for the effects of Covid 19 around the world.\r\nGoals\r\nGraph the Differences in Cases Around the World\r\nDeduce reasons for the Differences, referring to demographics, geographics, psychographic\r\nExamining Continental Behavior may be too broad and some countries may be extreme outliers\r\n\r\nCredit\r\nKane’s Free High School Data Science Bootcamp\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-24T18:06:10-04:00"
+      "last_modified": "2021-06-24T18:12:46-04:00"
     },
     {
       "path": "index.html",
@@ -13,7 +13,14 @@
       "description": "\"By using owid Covid 19 data and statistics, I examined trends.\"\n",
       "author": [],
       "contents": "\r\n\r\n# A tibble: 97,126 x 60\r\n   iso_code continent location    date       total_cases new_cases\r\n   <chr>    <chr>     <chr>       <date>           <dbl>     <dbl>\r\n 1 AFG      Asia      Afghanistan 2020-02-24           1         1\r\n 2 AFG      Asia      Afghanistan 2020-02-25           1         0\r\n 3 AFG      Asia      Afghanistan 2020-02-26           1         0\r\n 4 AFG      Asia      Afghanistan 2020-02-27           1         0\r\n 5 AFG      Asia      Afghanistan 2020-02-28           1         0\r\n 6 AFG      Asia      Afghanistan 2020-02-29           1         0\r\n 7 AFG      Asia      Afghanistan 2020-03-01           1         0\r\n 8 AFG      Asia      Afghanistan 2020-03-02           1         0\r\n 9 AFG      Asia      Afghanistan 2020-03-03           2         1\r\n10 AFG      Asia      Afghanistan 2020-03-04           4         2\r\n# ... with 97,116 more rows, and 54 more variables:\r\n#   new_cases_smoothed <dbl>, total_deaths <dbl>, new_deaths <dbl>,\r\n#   new_deaths_smoothed <dbl>, total_cases_per_million <dbl>,\r\n#   new_cases_per_million <dbl>,\r\n#   new_cases_smoothed_per_million <dbl>,\r\n#   total_deaths_per_million <dbl>, new_deaths_per_million <dbl>,\r\n#   new_deaths_smoothed_per_million <dbl>, reproduction_rate <dbl>,\r\n#   icu_patients <lgl>, icu_patients_per_million <lgl>,\r\n#   hosp_patients <lgl>, hosp_patients_per_million <lgl>,\r\n#   weekly_icu_admissions <lgl>,\r\n#   weekly_icu_admissions_per_million <lgl>,\r\n#   weekly_hosp_admissions <lgl>,\r\n#   weekly_hosp_admissions_per_million <lgl>, new_tests <dbl>,\r\n#   total_tests <dbl>, total_tests_per_thousand <dbl>,\r\n#   new_tests_per_thousand <dbl>, new_tests_smoothed <dbl>,\r\n#   new_tests_smoothed_per_thousand <dbl>, positive_rate <dbl>,\r\n#   tests_per_case <dbl>, tests_units <chr>,\r\n#   total_vaccinations <dbl>, people_vaccinated <dbl>,\r\n#   people_fully_vaccinated <dbl>, new_vaccinations <dbl>,\r\n#   new_vaccinations_smoothed <dbl>,\r\n#   total_vaccinations_per_hundred <dbl>,\r\n#   people_vaccinated_per_hundred <dbl>,\r\n#   people_fully_vaccinated_per_hundred <dbl>,\r\n#   new_vaccinations_smoothed_per_million <dbl>,\r\n#   stringency_index <dbl>, population <dbl>,\r\n#   population_density <dbl>, median_age <dbl>, aged_65_older <dbl>,\r\n#   aged_70_older <dbl>, gdp_per_capita <dbl>, extreme_poverty <dbl>,\r\n#   cardiovasc_death_rate <dbl>, diabetes_prevalence <dbl>,\r\n#   female_smokers <dbl>, male_smokers <dbl>,\r\n#   handwashing_facilities <dbl>, hospital_beds_per_thousand <dbl>,\r\n#   life_expectancy <dbl>, human_development_index <dbl>,\r\n#   excess_mortality <dbl>\r\n\r\n\r\n\r\n\r\n# A tibble: 6 x 2\r\n  continent     continent_cases\r\n  <chr>                   <dbl>\r\n1 Africa             1001262849\r\n2 Asia               7745393325\r\n3 Europe             8297008444\r\n4 North America      7872585386\r\n5 Oceania              12305807\r\n6 South America      5163322552\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-24T18:06:38-04:00"
+      "last_modified": "2021-06-24T18:13:10-04:00"
+    },
+    {
+      "path": "sources.html",
+      "title": "Sources",
+      "author": [],
+      "contents": "\r\nData from this project came from: https://ourworldindata.org/covid-vaccinations\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-24T18:13:11-04:00"
     }
   ],
   "collections": []

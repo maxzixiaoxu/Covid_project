@@ -86,29 +86,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Final Project: Covid 19 Around the World</title>
+  <title>Final Project: Covid 19 Around the World: Sources</title>
 
-  <meta property="description" itemprop="description" content="&quot;By using owid Covid 19 data and statistics, I examined trends.&quot;"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Final Project: Covid 19 Around the World"/>
+  <meta property="og:title" content="Final Project: Covid 19 Around the World: Sources"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="&quot;By using owid Covid 19 data and statistics, I examined trends.&quot;"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Final Project: Covid 19 Around the World"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Final Project: Covid 19 Around the World"/>
-  <meta property="twitter:description" content="&quot;By using owid Covid 19 data and statistics, I examined trends.&quot;"/>
+  <meta property="twitter:title" content="Final Project: Covid 19 Around the World: Sources"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["Final Project: Covid 19 Around the World"]},{"type":"character","attributes":{},"value":["\"By using owid Covid 19 data and statistics, I examined trends.\"\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Sources"]},{"type":"NULL"},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2053,7 +2050,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Final Project: Covid 19 Around the World","description":"\"By using owid Covid 19 data and statistics, I examined trends.\"","authors":[]}
+{"title":"Sources","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2076,75 +2073,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Final Project: Covid 19 Around the World</h1>
+<h1>Sources</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>“By using owid Covid 19 data and statistics, I examined trends.”</p></p>
+
 </div>
 
 
 <div class="d-article">
-<div class="layout-chunk" data-layout="l-body">
-<pre><code># A tibble: 97,126 x 60
-   iso_code continent location    date       total_cases new_cases
-   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;       &lt;date&gt;           &lt;dbl&gt;     &lt;dbl&gt;
- 1 AFG      Asia      Afghanistan 2020-02-24           1         1
- 2 AFG      Asia      Afghanistan 2020-02-25           1         0
- 3 AFG      Asia      Afghanistan 2020-02-26           1         0
- 4 AFG      Asia      Afghanistan 2020-02-27           1         0
- 5 AFG      Asia      Afghanistan 2020-02-28           1         0
- 6 AFG      Asia      Afghanistan 2020-02-29           1         0
- 7 AFG      Asia      Afghanistan 2020-03-01           1         0
- 8 AFG      Asia      Afghanistan 2020-03-02           1         0
- 9 AFG      Asia      Afghanistan 2020-03-03           2         1
-10 AFG      Asia      Afghanistan 2020-03-04           4         2
-# ... with 97,116 more rows, and 54 more variables:
-#   new_cases_smoothed &lt;dbl&gt;, total_deaths &lt;dbl&gt;, new_deaths &lt;dbl&gt;,
-#   new_deaths_smoothed &lt;dbl&gt;, total_cases_per_million &lt;dbl&gt;,
-#   new_cases_per_million &lt;dbl&gt;,
-#   new_cases_smoothed_per_million &lt;dbl&gt;,
-#   total_deaths_per_million &lt;dbl&gt;, new_deaths_per_million &lt;dbl&gt;,
-#   new_deaths_smoothed_per_million &lt;dbl&gt;, reproduction_rate &lt;dbl&gt;,
-#   icu_patients &lt;lgl&gt;, icu_patients_per_million &lt;lgl&gt;,
-#   hosp_patients &lt;lgl&gt;, hosp_patients_per_million &lt;lgl&gt;,
-#   weekly_icu_admissions &lt;lgl&gt;,
-#   weekly_icu_admissions_per_million &lt;lgl&gt;,
-#   weekly_hosp_admissions &lt;lgl&gt;,
-#   weekly_hosp_admissions_per_million &lt;lgl&gt;, new_tests &lt;dbl&gt;,
-#   total_tests &lt;dbl&gt;, total_tests_per_thousand &lt;dbl&gt;,
-#   new_tests_per_thousand &lt;dbl&gt;, new_tests_smoothed &lt;dbl&gt;,
-#   new_tests_smoothed_per_thousand &lt;dbl&gt;, positive_rate &lt;dbl&gt;,
-#   tests_per_case &lt;dbl&gt;, tests_units &lt;chr&gt;,
-#   total_vaccinations &lt;dbl&gt;, people_vaccinated &lt;dbl&gt;,
-#   people_fully_vaccinated &lt;dbl&gt;, new_vaccinations &lt;dbl&gt;,
-#   new_vaccinations_smoothed &lt;dbl&gt;,
-#   total_vaccinations_per_hundred &lt;dbl&gt;,
-#   people_vaccinated_per_hundred &lt;dbl&gt;,
-#   people_fully_vaccinated_per_hundred &lt;dbl&gt;,
-#   new_vaccinations_smoothed_per_million &lt;dbl&gt;,
-#   stringency_index &lt;dbl&gt;, population &lt;dbl&gt;,
-#   population_density &lt;dbl&gt;, median_age &lt;dbl&gt;, aged_65_older &lt;dbl&gt;,
-#   aged_70_older &lt;dbl&gt;, gdp_per_capita &lt;dbl&gt;, extreme_poverty &lt;dbl&gt;,
-#   cardiovasc_death_rate &lt;dbl&gt;, diabetes_prevalence &lt;dbl&gt;,
-#   female_smokers &lt;dbl&gt;, male_smokers &lt;dbl&gt;,
-#   handwashing_facilities &lt;dbl&gt;, hospital_beds_per_thousand &lt;dbl&gt;,
-#   life_expectancy &lt;dbl&gt;, human_development_index &lt;dbl&gt;,
-#   excess_mortality &lt;dbl&gt;</code></pre>
-<p><img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="index_files/figure-html5/Covid-plot-1.png" width="624" /></p>
-<pre><code># A tibble: 6 x 2
-  continent     continent_cases
-  &lt;chr&gt;                   &lt;dbl&gt;
-1 Africa             1001262849
-2 Asia               7745393325
-3 Europe             8297008444
-4 North America      7872585386
-5 Oceania              12305807
-6 South America      5163322552</code></pre>
-</div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Data from this project came from: <a href="https://ourworldindata.org/covid-vaccinations" class="uri">https://ourworldindata.org/covid-vaccinations</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

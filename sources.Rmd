@@ -1,0 +1,13 @@
+---
+title: "Sources"
+description: |
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+Data from this project came from: https://ourworldindata.org/covid-vaccinations
+
+
+
