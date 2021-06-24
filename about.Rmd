@@ -1,10 +1,22 @@
 ---
 title: "About this site"
 description: |
-  Some additional details about the website
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## About Me
+#### I'm **Max Xu** and I'm going to UBC next year. 
+## About the Project
+*Examining Covid 19 Cases and Trends Among the Continents*: Evidently, the topic of Covid 19 has been the headline for the past year, impacting the lives of many in our community. However as seen from the news, the degree of influence it has had in different places varies and most people have only looked at the status of North America. My project looks to examine the other continents and attempts find trends/potential reasons for the effects of Covid 19 around the world. 
+
+### Goals
+* Graph the Differences in Cases Around the World     
+* Deduce reasons for the Differences, referring to demographics, geographics, psychographic
+  + Examining Continental Behavior may be too broad and some countries may be extreme outliers
+
+### Credit
+[Kane’s Free High School Data Science Bootcamp](https://bootcamp.davidkane.info/)

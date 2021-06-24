@@ -5,9 +5,42 @@ description: |
 site: distill::distill_website
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, layout = "l-body-outset"}
 knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(ggthemes)
+library(knitr)
+library(rmarkdown)
+library(gt)
+```
 
+```{r}
+raw_data <- read_csv(file="owid-covid-data.csv")
+raw_data
+clean_data1 <- raw_data %>% 
+  select(total_cases, human_development_index) %>% 
+  ggplot(aes(total_cases,human_development_index))  +
+  geom_point()+
+  geom_smooth(method="lm",formula=y~x, se=FALSE)+
+  theme_clean()+
+  labs(title="Fuel Effieciency and Weight", subtitle="Heavier cars are less fuel efficient",x="Weight",y="MPG")
+clean_data1
+```
+
+
+```{r Covid-plot}
+
+clean_data <-raw_data %>% 
+  select(continent, total_cases) %>% 
+  drop_na() %>% 
+  group_by(continent) %>% 
+  summarize(continent_cases=sum(total_cases)) 
+clean_data %>% 
+  ggplot(mapping=aes(x=continent,y=continent_cases,fill=continent))+
+  geom_col()+
+  scale_y_continuous(labels = scales::number_format())+
+  labs(title="Covid Cases per Continent",subtitle="Developed and Populated Continents with Higher Cases", x="Continent",y="Continent Cases",fill="Continents")
+clean_data
 
 ```
 

@@ -2083,7 +2083,67 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code># A tibble: 97,126 x 60
+   iso_code continent location    date       total_cases new_cases
+   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;       &lt;date&gt;           &lt;dbl&gt;     &lt;dbl&gt;
+ 1 AFG      Asia      Afghanistan 2020-02-24           1         1
+ 2 AFG      Asia      Afghanistan 2020-02-25           1         0
+ 3 AFG      Asia      Afghanistan 2020-02-26           1         0
+ 4 AFG      Asia      Afghanistan 2020-02-27           1         0
+ 5 AFG      Asia      Afghanistan 2020-02-28           1         0
+ 6 AFG      Asia      Afghanistan 2020-02-29           1         0
+ 7 AFG      Asia      Afghanistan 2020-03-01           1         0
+ 8 AFG      Asia      Afghanistan 2020-03-02           1         0
+ 9 AFG      Asia      Afghanistan 2020-03-03           2         1
+10 AFG      Asia      Afghanistan 2020-03-04           4         2
+# ... with 97,116 more rows, and 54 more variables:
+#   new_cases_smoothed &lt;dbl&gt;, total_deaths &lt;dbl&gt;, new_deaths &lt;dbl&gt;,
+#   new_deaths_smoothed &lt;dbl&gt;, total_cases_per_million &lt;dbl&gt;,
+#   new_cases_per_million &lt;dbl&gt;,
+#   new_cases_smoothed_per_million &lt;dbl&gt;,
+#   total_deaths_per_million &lt;dbl&gt;, new_deaths_per_million &lt;dbl&gt;,
+#   new_deaths_smoothed_per_million &lt;dbl&gt;, reproduction_rate &lt;dbl&gt;,
+#   icu_patients &lt;lgl&gt;, icu_patients_per_million &lt;lgl&gt;,
+#   hosp_patients &lt;lgl&gt;, hosp_patients_per_million &lt;lgl&gt;,
+#   weekly_icu_admissions &lt;lgl&gt;,
+#   weekly_icu_admissions_per_million &lt;lgl&gt;,
+#   weekly_hosp_admissions &lt;lgl&gt;,
+#   weekly_hosp_admissions_per_million &lt;lgl&gt;, new_tests &lt;dbl&gt;,
+#   total_tests &lt;dbl&gt;, total_tests_per_thousand &lt;dbl&gt;,
+#   new_tests_per_thousand &lt;dbl&gt;, new_tests_smoothed &lt;dbl&gt;,
+#   new_tests_smoothed_per_thousand &lt;dbl&gt;, positive_rate &lt;dbl&gt;,
+#   tests_per_case &lt;dbl&gt;, tests_units &lt;chr&gt;,
+#   total_vaccinations &lt;dbl&gt;, people_vaccinated &lt;dbl&gt;,
+#   people_fully_vaccinated &lt;dbl&gt;, new_vaccinations &lt;dbl&gt;,
+#   new_vaccinations_smoothed &lt;dbl&gt;,
+#   total_vaccinations_per_hundred &lt;dbl&gt;,
+#   people_vaccinated_per_hundred &lt;dbl&gt;,
+#   people_fully_vaccinated_per_hundred &lt;dbl&gt;,
+#   new_vaccinations_smoothed_per_million &lt;dbl&gt;,
+#   stringency_index &lt;dbl&gt;, population &lt;dbl&gt;,
+#   population_density &lt;dbl&gt;, median_age &lt;dbl&gt;, aged_65_older &lt;dbl&gt;,
+#   aged_70_older &lt;dbl&gt;, gdp_per_capita &lt;dbl&gt;, extreme_poverty &lt;dbl&gt;,
+#   cardiovasc_death_rate &lt;dbl&gt;, diabetes_prevalence &lt;dbl&gt;,
+#   female_smokers &lt;dbl&gt;, male_smokers &lt;dbl&gt;,
+#   handwashing_facilities &lt;dbl&gt;, hospital_beds_per_thousand &lt;dbl&gt;,
+#   life_expectancy &lt;dbl&gt;, human_development_index &lt;dbl&gt;,
+#   excess_mortality &lt;dbl&gt;</code></pre>
+<p><img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/Covid-plot-1.png" width="624" /></p>
+<pre><code># A tibble: 6 x 2
+  continent     continent_cases
+  &lt;chr&gt;                   &lt;dbl&gt;
+1 Africa             1001262849
+2 Asia               7745393325
+3 Europe             8297008444
+4 North America      7872585386
+5 Oceania              12305807
+6 South America      5163322552</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
