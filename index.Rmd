@@ -5,13 +5,10 @@ description: |
 site: distill::distill_website
 ---
 
-```{r setup, include=FALSE, layout = "l-body-outset"}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
-library(ggthemes)
-library(knitr)
-library(rmarkdown)
-library(gt)
+library(plotly)
 ```
 
 ```{r}
@@ -29,10 +26,9 @@ clean_data %>%
   ggplot(mapping=aes(x=continent,y=continent_cases,fill=continent))+
   geom_col()+
   scale_y_continuous(labels = scales::number_format())+
-  labs(title="Covid Cases per Continent",subtitle="Developed and Populated Continents with Higher Cases", x="Continent",y="Continent Cases",fill="Continents")
+  labs(title="Covid Cases per Continent", x="Continent",y="Continent Cases",fill="Continents")
 
 ```
-Initial Data shows a shockingly low amount of Covid Cases in Africa compared to other continents. 
 
 ```{r}
 clean_data1 <- raw_data %>% 
@@ -44,5 +40,63 @@ clean_data1 %>%
   ggplot(mapping=aes(x=continent,y=continent_deaths,fill=continent))+
   geom_col()+
   scale_y_continuous(labels = scales::number_format())+
-  labs(title="Covid Deaths per Continent",subtitle="Developed and Populated Continents with Higher Deaths", x="Continent",y="Continent Deaths",fill="Continents")
+  labs(title="Covid Deaths per Continent", x="Continent",y="Continent Deaths",fill="Continents")
 ```
+
+-There is no data on the continent of Antarctica because of insufficient human population 
+
+-Furthermore, there is very little cases in Oceania/Australia that I will consider it to be neglible for data and filter out in the following graph
+
+-Initial Data shows a shockingly low amount of Covid Cases/Deaths in Africa compared to other continents
+
+
+```{r}
+clean_data2 <- raw_data%>% 
+  filter(continent==c("Africa","Asia","Europe","North America","South America")) %>% 
+  select(date, new_cases, continent, location) %>% 
+  drop_na(new_cases) %>% 
+  group_by(continent, date) %>% 
+  summarize(new_case=sum(new_cases)) %>% 
+  ggplot(aes(x=date, y=new_case,color=continent, text=paste("Date:", date,"\n","New Case:",new_case)))+
+  geom_point()+
+  scale_y_continuous(labels = scales::number_format())+
+  labs(title="Weekly New Cases Among the Continents Throughout the\nYear", x="Date", y="New Cases", color="Continent", caption="Source: Our World in Data")
+
+ggplotly(clean_data2,tooltip="text")
+
+```
+<aside>
+Source: Our World in Data
+</aside>
+
+The plot above has all the continents in one graph allowing for easier comparison. The plot above separates the continents for a cleaner look. Also: The plots are interactive, hovering over points will provide precise dates and new cases.
+
+```{r}
+clean_data2 <- raw_data%>% 
+  filter(continent==c("Africa","Asia","Europe","North America","South America")) %>% 
+  select(date, new_cases, continent, location) %>% 
+  drop_na(new_cases) %>% 
+  group_by(continent, date) %>% 
+  summarize(new_case=sum(new_cases)) %>% 
+  ggplot(aes(x=date, y=new_case,color=continent, text=paste("Date:", date,"\n","New Case:",new_case)))+
+  geom_point()+
+  facet_wrap(~continent)+
+  scale_y_continuous(labels = scales::number_format())+
+  labs(title="Weekly New Cases Among the Continents Throughout the\nYear",x="Date", y="New Cases", color="Continent", caption="Source: Our World in Data")
+
+ggplotly(clean_data2,tooltip="text")
+
+```
+<aside>
+Source: Our World in Data
+</aside>
+
+-North America and Asia has surges in new cases in January 2021, and May 2021 respectively
+
+-Both North America and Asia made significant progress in decreasing the new cases
+
+-Africa, South America, and Europe have been relatively consistent in new cases 
+
+-Europe is progressing in decreasing new cases, but South America has seen an increase recently
+
+
