@@ -1,0 +1,13 @@
+---
+title: "Final Project: Covid 19 Around the World"
+description: |
+  "By using owid Covid 19 data and statistics, I examined trends."
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+
+```
+

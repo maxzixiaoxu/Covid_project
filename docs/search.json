@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-24T17:17:10-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Final Project: Covid 19 Around the World",
+      "description": "\"By using owid Covid 19 data and statistics, I examined trends.\"\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-24T17:17:12-04:00"
+    }
+  ],
+  "collections": []
+}
